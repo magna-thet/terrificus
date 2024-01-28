@@ -13,7 +13,9 @@ contract TodoList {
         todos.push(Todo({text: _text, completed: false}));
     }
 
-    function updateText() external {}
+    function updateText(uint _idx, string calldata _text) external {
+        todos[_idx].text = _text;
+    }
 
     function get() external view {}
 }
