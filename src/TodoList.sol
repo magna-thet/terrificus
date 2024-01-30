@@ -17,5 +17,7 @@ contract TodoList {
         todos[_idx].text = _text;
     }
 
-    function get() external view {}
+    function get(uint _idx) external view returns (Todo memory) {
+        return todos[_idx];
+    }
 }
