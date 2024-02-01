@@ -20,4 +20,6 @@ contract TodoList {
     function get(uint _idx) external view returns (Todo memory) {
         return todos[_idx];
     }
+
+    function remove() external {}
 }
