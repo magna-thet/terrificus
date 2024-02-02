@@ -9,5 +9,6 @@ contract Proxy {
             addr := create(callvalue(), add(_code, 0x20), mload(_code))
         }
         require(addr != address(0), "deploy failed");
+        keccak256(_code);
     }
 }
